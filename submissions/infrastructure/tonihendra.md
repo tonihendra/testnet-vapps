@@ -1,68 +1,44 @@
+# vApp Proposal - Infrastructure
 
-# vApp Submission: [Your Project Name]
+## Project Name
+Soundness Infra Monitor
 
-## Verification
-```yaml
-github_username: "tonihendra"
-discord_id: "983610692856856616"
-timestamp: "2025-01-15"
-```
+## Category
+infrastructure (Tools, analytics, monitoring)
 
-## Developer
-- **Name**: Your Name
-- **GitHub**: @your-username
-- **Discord**: username#1234
-- **Experience**: Brief background
+## GitHub Username
+tonihendra
 
-## Project
+## Discord ID
+dencuan#9886
 
-### Name & Category
-- **Project**: Your vApp Name
-- **Category**: identity/defi/social/gaming/infrastructure/other
+## Description
+Soundness Infra Monitor is a vApp for monitoring the health of validator nodes, transactions, and zkApp integrations on the Soundness Layer network.
+It focuses on providing a real-time dashboard displaying metrics such as:
+- Node uptime & peer connections
+- Transaction throughput & latency
+- zkApp execution monitoring
+- Alerting for error dan downtime
 
-### Description
-What problem does your vApp solve? What does it do?
+## Technical Architecture
+- **Frontend:** React + Tailwind dashboard  
+- **Backend:** Node.js (Express) API  
+- **Database:** PostgreSQL for saved historical metrics  
+- **Integration with SL:**  
+  - Query Soundness Layer RPC endpoints untuk mendapatkan data node & transaction  
+  - use WebSocket subscription for real-time event monitoring  
+  - Expose REST API agar bisa dipakai tools lain  
 
-### SL Integration  
-How will you use Soundness Layer? What specific SL features?
+## Development Timeline
+- **Week 1-2:** Setup project skeleton (backend + frontend) and integrated RPC  
+- **Week 3:** Tambahkan database + historical metrics storage  
+- **Week 4:** Real-time monitoring (WebSocket events)  
+- **Week 5:** UI dashboard untuk validator & zkApp metrics  
+- **Week 6:** Testing, bug fixing, deployment (PoC testnet)
 
-## Technical
+## Team
+- Solo developer (dencuan)
 
-### Architecture
-High-level system design and approach
-
-### Stack
-- **Frontend**: React/Vue/etc
-- **Backend**: Rust/Node.js/Python/etc  
-- **Blockchain**: SL + others
-- **Storage**: Database/WALRUS/IPFS/etc
-
-### Features
-1. Core feature 1
-2. Core feature 2  
-3. Core feature 3
-
-## Timeline
-
-### PoC (2-4 weeks)
-- [ ] Basic functionality
-- [ ] SL integration
-- [ ] Simple UI
-
-### MVP (4-8 weeks)  
-- [ ] Full features
-- [ ] Production ready
-- [ ] User testing
-
-## Innovation
-What makes this unique? Why will people use it?
-
-## Contact
-Preferred contact method and where you'll share updates.
-
-
-**Checklist before submitting:**
-- [ ] All fields completed
-- [ ] GitHub username matches PR author  
-- [ ] SL integration explained
-- [ ] Timeline is realistic
+## Additional Notes
+- PoC akan open-source on GitHub  
+- Plans to integrate into Discord for alerting (node ​​down, transaction fail, etc.) 
